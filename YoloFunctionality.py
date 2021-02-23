@@ -52,7 +52,8 @@ def yolo_cut(image):
     w = boxes[0][2]
     h = boxes[0][3]
     #print(str(x)+" "+str(y)+" "+str(w)+" "+str(h))
-    img_crop = img[y-50:y+h+50, x-50:x+w+50]
+    expand = 50 #expand mask by number of pixels
+    img_crop = img[y-expand:y+h+expand, x-expand:x+w+expand]
     # cv2.imshow("Hand_cropped", img_crop)
     # cv2.waitKey(0)
     # cv2.destroyAllWindows()

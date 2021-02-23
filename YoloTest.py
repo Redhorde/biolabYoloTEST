@@ -1,17 +1,11 @@
 from fastai1.old.fastai.conv_learner import *
 from fastai1.old.fastai.model import *
-import cv2
 
-import os
+import cv2
 import pandas as pd
 import numpy as np
-import re
-import scipy
-from pathlib import Path
 import matplotlib.pyplot as plt
 
-from tqdm import tqdm
-import YoloFunctionality
 from YoloFunctionality import yolo_cut
 
 
@@ -25,7 +19,7 @@ vgg_result = pd.Series()
 
 image = cv2.imread(files_path)
 img_crop = yolo_cut(image)
-img_crop = image
+#img_crop = image
 #y0 = 200
 #x0 = 500
 #height = 600
